@@ -127,6 +127,62 @@ class _StudyGuidesState extends State<StudyGuides> {
   }
 }
 
+class APBiologyGuide extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("AP Biology Guide"),
+      ),
+      body: Container(
+        child: ListView(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(20),
+              child: Text(
+                "Chapter 1: Introduction to Biology",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(20),
+              child: Text(
+                "In this chapter, you will learn about the fundamental concepts of biology, including the scientific method and cellular structure and function. You will also explore the history of biology and the major theories and discoveries that have shaped our understanding of life.",
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(20),
+              child: Text(
+                "Chapter 2: The Chemical Basis of Life",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(20),
+              child: Text(
+                "In this chapter, you will learn about the important molecules and elements that make up living organisms, including carbohydrates, lipids, proteins, and nucleic acids. You will also learn about chemical reactions, enzymes, and metabolic pathways.",
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            // Add more chapters here
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class APChemistryStudyGuide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -497,6 +553,9 @@ class _MyHomePageState extends State<MyHomePage> {
       case 7:
         page = APChemistryStudyGuide();
         break;
+      case 8:
+        page = APBiologyGuide();
+        break;
       default:
         throw UnimplementedError('no widget for $selectedIndex');
     }
@@ -538,6 +597,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 NavigationRailDestination(
                   icon: Icon(Icons.book),
                   label: Text('AP Chemistry Study Guide'),
+                ),
+                NavigationRailDestination(
+                  icon: Icon(Icons.book),
+                  label: Text('AP Biology Study Guide'),
                 )
               ],
               selectedIndex: selectedIndex,
