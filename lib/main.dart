@@ -1,6 +1,8 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:pdfx/pdfx.dart';
 
 void main() {
   runApp(MyApp());
@@ -289,6 +291,12 @@ class _SeniorAssassinsState extends State<SeniorAssassins> {
               },
             ),
           ),
+          Container(
+            padding: EdgeInsets.all(14),
+            child: PDFView(
+              filePath: 'icons/Thesisbaoto.pdf',
+            ),
+          )
         ],
       ),
     );
@@ -397,7 +405,7 @@ class _LatinIIState extends State<LatinII> {
           ),
           ListTile(
             title: Text('Auriga'),
-            subtitle: Text('Charioteer'),
+            subtitle: TextBox.fromLTRBD(double left, double top, double right, double bottom, TextDirection direction)
           ),
           ListTile(
             title: Text('Medea'),
