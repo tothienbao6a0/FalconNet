@@ -167,6 +167,18 @@ class BigOCheatsheet extends StatelessWidget {
             Text(
                 "An algorithm with a time complexity of O(2^n) takes more time to run as 2 to the power of the size of the input grows.",
                 style: TextStyle(fontSize: 14)),
+            Image.network(
+              'https://miro.medium.com/max/1100/1*0AO5pM3BBiIl8FLUJS_Uhg.webp',
+              width: double.infinity,
+              height: 500,
+              fit: BoxFit.fill,
+            ),
+            Image.network(
+              'https://res.cloudinary.com/practicaldev/image/fetch/s--Wr2oHsky--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.bigocheatsheet.com/img/big-o-cheat-sheet-poster.png',
+              width: double.infinity,
+              height: 500,
+              fit: BoxFit.fill,
+            ),
           ],
         ),
       ),
