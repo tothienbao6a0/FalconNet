@@ -399,6 +399,53 @@ class APChemistryStudyGuide extends StatelessWidget {
   }
 }
 
+class APCSStudyGuide extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('AP CS Study Guide'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                'Topics:',
+                style: Theme.of(context).textTheme.headline6,
+              ),
+            ),
+            ListTile(
+              title: Text('Atomic Structure'),
+              subtitle: Text(
+                  'Electronic configuration, isotopes, atomic mass, and atomic number'),
+            ),
+            ListTile(
+              title: Text('Bonding'),
+              subtitle: Text('Ionic, covalent, and metallic bonding'),
+            ),
+            ListTile(
+              title: Text('Acids and Bases'),
+              subtitle: Text('pH, pOH, strong and weak acids and bases'),
+            ),
+            ListTile(
+              title: Text('Thermochemistry'),
+              subtitle:
+                  Text('Heat, internal energy, enthalpy, and thermodynamics'),
+            ),
+            ListTile(
+              title: Text('Solutions and Solubility'),
+              subtitle: Text(
+                  'Concentration, molarity, molality, and colligative properties'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class SeniorAssassins extends StatefulWidget {
   @override
   _SeniorAssassinsState createState() => _SeniorAssassinsState();
@@ -735,6 +782,9 @@ class _MyHomePageState extends State<MyHomePage> {
         page = APCalculusBC();
         break;
       case 10:
+        page = APCSStudyGuide();
+        break;
+      case 11:
         page = BigOCheatsheet();
         break;
       default:
@@ -786,6 +836,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 NavigationRailDestination(
                     icon: Icon(Icons.calculate),
                     label: Text('AP Calculus BC Guide')),
+                NavigationRailDestination(
+                    icon: Icon(Icons.calculate), label: Text('AP CS Guide')),
                 NavigationRailDestination(
                     icon: Icon(Icons.lock_clock),
                     label: Text('Big O Cheat Sheet')),
