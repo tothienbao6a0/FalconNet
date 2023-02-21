@@ -54,7 +54,10 @@ class APBiologyGuide extends StatelessWidget {
             SizedBox(
                 height: 500,
                 width: 500,
-                child: SfPdfViewer.asset('assets/AP Bio.pdf'))
+                child: SfPdfViewer.asset(
+                  'assets/AP Bio.pdf',
+                  enableDoubleTapZooming: true,
+                ))
           ],
         ),
       ),

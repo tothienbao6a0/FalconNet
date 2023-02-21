@@ -11,6 +11,10 @@ import 'bigOCheatsheet.dart';
 import 'LatinI.dart';
 import 'LatinII.dart';
 import 'LatinIII.dart';
+import 'APUSH.dart';
+import 'ComputerScienceA.dart';
+import 'LinearAlgebra.dart';
+import 'MultiCalc.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -56,6 +60,21 @@ class _MyHomePageState extends State<MyHomePage> {
         break;
       case 10:
         page = BigOCheatsheet();
+        break;
+      case 11:
+        page = APUSH();
+        break;
+      case 12:
+        page = ComputerScienceA();
+        break;
+      case 13:
+        page = MultiCalc();
+        break;
+      case 14:
+        page = ComputerScienceA();
+        break;
+      case 15:
+        page = Physics();
         break;
       default:
         throw UnimplementedError('no widget for $selectedIndex');
@@ -109,6 +128,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 NavigationRailDestination(
                     icon: Icon(Icons.lock_clock),
                     label: Text('Big O Cheat Sheet')),
+                NavigationRailDestination(
+                    icon: Icon(Icons.history),
+                    label: Text('APUSH Study Guide')),
+                NavigationRailDestination(
+                    icon: Icon(Icons.computer),
+                    label: Text('AP Computer Science A')),
+                NavigationRailDestination(
+                    icon: Icon(Icons.functions), label: Text('Multi-Calc')),
+                NavigationRailDestination(
+                    icon: Icon(Icons.blur_linear),
+                    label: Text('Linear Algebra')),
+                NavigationRailDestination(
+                    icon: Tab(), label: Text('Physics Study Guide')),
               ],
               selectedIndex: selectedIndex,
               onDestinationSelected: (value) {
