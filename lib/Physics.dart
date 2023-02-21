@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-class MultiCalc extends StatelessWidget {
+class Physics extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Multivariable Calculus Study Guide'),
+          title: Text('APUSH Study Guide'),
         ),
         body: SingleChildScrollView(
             child: Container(
@@ -15,6 +15,6 @@ class MultiCalc extends StatelessWidget {
                     height: 500,
                     width: 500,
                     child: SfPdfViewer.asset(
-                        'assets/Multivariable Calculus Winter.pdf')))));
+                        'assets/MIKEYAN_s APUSH Ultimate Study Guide.pdf')))));
   }
 }

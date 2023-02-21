@@ -31,19 +31,19 @@ class _APCalculusBCState extends State<APCalculusBC> {
                     Text(
                         'The limit formula represents the value that a function approaches as the input value approaches a specific number (a).'),
                     Text("Limits:",
-                        style: Theme.of(context).textTheme.headline5),
+                        style: Theme.of(context).textTheme.headlineSmall),
                     Text(
                         "- Limits are a way to describe the behavior of a function as it approaches a certain value."),
                     Text(
                         "- Limits are used to calculate derivatives and integrals."),
                     Text("Continuity:",
-                        style: Theme.of(context).textTheme.headline5),
+                        style: Theme.of(context).textTheme.headlineSmall),
                     Text(
                         "- A function is continuous at a point if its limit exists at that point and is equal to the function's value at that point."),
                     Text(
                         "- A function is continuous on an interval if it is continuous at every point in that interval."),
                     Text("Differentiability:",
-                        style: Theme.of(context).textTheme.headline5),
+                        style: Theme.of(context).textTheme.headlineSmall),
                     Text(
                         "- A function is differentiable at a point if its derivative exists at that point."),
                     Text(

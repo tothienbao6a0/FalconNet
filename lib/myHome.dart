@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Physics.dart';
 import 'favorites.dart';
 import 'generator.dart';
 import 'studyguides.dart';
@@ -74,6 +75,9 @@ class _MyHomePageState extends State<MyHomePage> {
         page = ComputerScienceA();
         break;
       case 15:
+        page = LinearAlgebra();
+        break;
+      case 16:
         page = Physics();
         break;
       default:
@@ -140,7 +144,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     icon: Icon(Icons.blur_linear),
                     label: Text('Linear Algebra')),
                 NavigationRailDestination(
-                    icon: Tab(), label: Text('Physics Study Guide')),
+                    icon: Icon(Icons.access_alarm),
+                    label: Text('Physics Study Guide')),
               ],
               selectedIndex: selectedIndex,
               onDestinationSelected: (value) {
