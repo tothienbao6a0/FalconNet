@@ -86,75 +86,85 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Row(
         children: [
-          SafeArea(
-            child: NavigationRail(
-              extended: true,
-              destinations: [
-                NavigationRailDestination(
-                  icon: Icon(Icons.home),
-                  label: Text('Home'),
+          LayoutBuilder(builder: (context, constraints) {
+            return SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                child: IntrinsicHeight(
+                  child: SafeArea(
+                    child: NavigationRail(
+                      extended: true,
+                      destinations: [
+                        NavigationRailDestination(
+                          icon: Icon(Icons.home),
+                          label: Text('Home'),
+                        ),
+                        NavigationRailDestination(
+                          icon: Icon(Icons.favorite),
+                          label: Text('Favorites'),
+                        ),
+                        NavigationRailDestination(
+                          icon: Icon(Icons.book),
+                          label: Text('Study Guides'),
+                        ),
+                        NavigationRailDestination(
+                          icon: Icon(Icons.book),
+                          label: Text('Latin I'),
+                        ),
+                        NavigationRailDestination(
+                          icon: Icon(Icons.book),
+                          label: Text('Latin II'),
+                        ),
+                        NavigationRailDestination(
+                          icon: Icon(Icons.book),
+                          label: Text('Latin III'),
+                        ),
+                        NavigationRailDestination(
+                          icon: Icon(Icons.book),
+                          label: Text('Senior Assassins'),
+                        ),
+                        NavigationRailDestination(
+                          icon: Icon(Icons.book),
+                          label: Text('AP Chemistry Study Guide'),
+                        ),
+                        NavigationRailDestination(
+                          icon: Icon(Icons.book),
+                          label: Text('AP Biology Study Guide'),
+                        ),
+                        NavigationRailDestination(
+                            icon: Icon(Icons.calculate),
+                            label: Text('AP Calculus BC Guide')),
+                        NavigationRailDestination(
+                            icon: Icon(Icons.lock_clock),
+                            label: Text('Big O Cheat Sheet')),
+                        NavigationRailDestination(
+                            icon: Icon(Icons.history),
+                            label: Text('APUSH Study Guide')),
+                        NavigationRailDestination(
+                            icon: Icon(Icons.computer),
+                            label: Text('AP Computer Science A')),
+                        NavigationRailDestination(
+                            icon: Icon(Icons.functions),
+                            label: Text('Multi-Calc')),
+                        NavigationRailDestination(
+                            icon: Icon(Icons.blur_linear),
+                            label: Text('Linear Algebra')),
+                        NavigationRailDestination(
+                            icon: Icon(Icons.access_alarm),
+                            label: Text('Physics Study Guide')),
+                      ],
+                      selectedIndex: selectedIndex,
+                      onDestinationSelected: (value) {
+                        setState(() {
+                          selectedIndex = value;
+                        });
+                      },
+                    ),
+                  ),
                 ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.favorite),
-                  label: Text('Favorites'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.book),
-                  label: Text('Study Guides'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.book),
-                  label: Text('Latin I'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.book),
-                  label: Text('Latin II'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.book),
-                  label: Text('Latin III'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.book),
-                  label: Text('Senior Assassins'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.book),
-                  label: Text('AP Chemistry Study Guide'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.book),
-                  label: Text('AP Biology Study Guide'),
-                ),
-                NavigationRailDestination(
-                    icon: Icon(Icons.calculate),
-                    label: Text('AP Calculus BC Guide')),
-                NavigationRailDestination(
-                    icon: Icon(Icons.lock_clock),
-                    label: Text('Big O Cheat Sheet')),
-                NavigationRailDestination(
-                    icon: Icon(Icons.history),
-                    label: Text('APUSH Study Guide')),
-                NavigationRailDestination(
-                    icon: Icon(Icons.computer),
-                    label: Text('AP Computer Science A')),
-                NavigationRailDestination(
-                    icon: Icon(Icons.functions), label: Text('Multi-Calc')),
-                NavigationRailDestination(
-                    icon: Icon(Icons.blur_linear),
-                    label: Text('Linear Algebra')),
-                NavigationRailDestination(
-                    icon: Icon(Icons.access_alarm),
-                    label: Text('Physics Study Guide')),
-              ],
-              selectedIndex: selectedIndex,
-              onDestinationSelected: (value) {
-                setState(() {
-                  selectedIndex = value;
-                });
-              },
-            ),
-          ),
+              ),
+            );
+          }),
           Expanded(
             child: Container(
               color: Theme.of(context).colorScheme.primaryContainer,
