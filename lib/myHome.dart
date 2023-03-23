@@ -150,6 +150,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 NavigationRailDestination(
                     icon: Icon(Icons.access_alarm),
                     label: Text('Physics Study Guide')),
+                NavigationRailDestination(
+                    icon: Icon(Icons.access_alarm), label: Text('AI Assistant'))
               ],
               selectedIndex: selectedIndex,
               onDestinationSelected: (value) {
