@@ -16,7 +16,6 @@ import 'APUSH.dart';
 import 'ComputerScienceA.dart';
 import 'LinearAlgebra.dart';
 import 'MultiCalc.dart';
-import 'ChatGPT.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -80,9 +79,6 @@ class _MyHomePageState extends State<MyHomePage> {
         break;
       case 16:
         page = Physics();
-        break;
-      case 17:
-        page = ChatGPTAssistant();
         break;
       default:
         throw UnimplementedError('no widget for $selectedIndex');
@@ -150,8 +146,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 NavigationRailDestination(
                     icon: Icon(Icons.access_alarm),
                     label: Text('Physics Study Guide')),
-                NavigationRailDestination(
-                    icon: Icon(Icons.access_alarm), label: Text('AI Assistant'))
               ],
               selectedIndex: selectedIndex,
               onDestinationSelected: (value) {
